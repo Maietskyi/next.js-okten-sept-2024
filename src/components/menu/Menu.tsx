@@ -1,24 +1,22 @@
 import React from 'react';
+import Link from "next/link";
 
-const MenuComponent = () => {
+const Menu = () => {
     return (
         <div>
             <ul>
                 <li>
-                    <Link to='/'>Home</Link>
+                    <Link href={'/'}>Home</Link>
                 </li>
                 <li>
-                    <Link to='/car'>auth</Link>
+                    <Link href={'/cars'}>Cars</Link>
                 </li>
                 <li>
-                    <Link to='/auth/users'>Users</Link>
-                </li>
-                <li>
-                    <Link to='/auth/recipes'>recipes</Link>
+                    <Link href={'/cars/create'}>Create car</Link>
                 </li>
             </ul>
         </div>
-);
+    );
 };
 
-export default MenuComponent;
+export default Menu;
