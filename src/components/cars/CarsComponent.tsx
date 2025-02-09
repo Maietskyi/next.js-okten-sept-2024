@@ -1,5 +1,5 @@
 import {getAllCars} from "@/service/api.service";
-import CarComponent from "@/components/car-component/CarComponent";
+import CarComponent from "@/components/car/CarComponent";
 import React from "react";
 
 
