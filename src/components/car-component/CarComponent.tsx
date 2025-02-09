@@ -7,9 +7,12 @@ type CarProps = {
 
 const CarComponent = ({car}:CarProps) => {
     return (
-        <div>
-            {car.id} -- {car.brand}
-        </div>
+                <tr  key={car.id} className="text-center border ">
+                    <td className="border p-2">{car.id}</td>
+                    <td className="border p-2">{car.brand}</td>
+                    <td className="border p-2">${car.price}</td>
+                    <td className="border p-2">{car.year}</td>
+                </tr>
     );
 };
 
