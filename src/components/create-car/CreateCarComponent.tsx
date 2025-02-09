@@ -1,11 +1,11 @@
 
 
-const CarsComponent = () => {
+const CreateCarComponent = () => {
     return (
         <div>
-            Cars Component
+            Create Car Component
         </div>
     );
 };
 
-export default CarsComponent;
+export default CreateCarComponent;
