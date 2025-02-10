@@ -1,6 +1,7 @@
 import {getAllCars} from "@/server-actions/actions";
 import CarComponent from "@/components/car/CarComponent";
 import React from "react";
+import {ICar} from "@/models/ICar";
 
 const CarsComponent = async () => {
     const cars = await getAllCars();
@@ -18,7 +19,7 @@ const CarsComponent = async () => {
                 </thead>
                 <tbody>
                 {
-                    cars.map((car) =>
+                    cars.map((car: ICar) =>
                         <CarComponent key={car.id} car={car}/>)
                 }
                 </tbody>
