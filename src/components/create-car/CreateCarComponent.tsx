@@ -1,6 +1,6 @@
 "use client";
 
-import {carValidator} from "@/components/validator/CarValidator";
+import {carValidator} from "@/validator/CarValidator";
 import {ICar} from "@/models/ICar";
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
