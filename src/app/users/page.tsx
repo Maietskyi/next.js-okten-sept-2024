@@ -2,7 +2,7 @@ import React from 'react';
 
 const UsersPage = async () => {
 
-    const users = await fetch('http://jsonplaceholder.typicode.com/users')
+    const users = await fetch('http://jsonplaceholder.typicode.com/users', {next: {revalidate: 5}})
         .then(res => res.json());
 
     return (
@@ -16,3 +16,5 @@ const UsersPage = async () => {
 };
 
 export default UsersPage;
+
+// Incremental Static Regeneration (ISR)
