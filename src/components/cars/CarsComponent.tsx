@@ -1,4 +1,4 @@
-import {getAllCars} from "@/service/api.service";
+import {getAllCars} from "@/server-actions/actions";
 import CarComponent from "@/components/car/CarComponent";
 import React from "react";
 

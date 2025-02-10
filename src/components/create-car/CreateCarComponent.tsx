@@ -4,7 +4,7 @@ import {carValidator} from "@/validator/CarValidator";
 import {ICar} from "@/models/ICar";
 import {useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
-import {addCar, getAllCars} from "@/service/api.service";
+import {addCar, getAllCars} from "@/server-actions/actions";
 import {useEffect, useState} from "react";
 
 
