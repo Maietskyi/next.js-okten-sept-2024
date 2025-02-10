@@ -18,3 +18,4 @@ const UsersPage = async () => {
 export default UsersPage;
 
 // Це підхід до сторінок на яких інформація рідко оновлюється
+// Static Site Generation (SSG);
