@@ -1,21 +1,19 @@
-import React from 'react';
+'use client';
 
-const UsersPage = async () => {
 
-    const users = await fetch('http://jsonplaceholder.typicode.com/users', {next: {revalidate: 5}})
-        .then(res => res.json());
+import {useEffect} from "react";
+
+const UsersPage = () => {
+
+    useEffect(() => {
+        console.log(localStorage);
+    }, []);
 
     return (
         <div>
-            Users Page
-            <h4>{Date.now()}</h4>
-            {users.map((user: {id:number, username:string}) => (<div key={user.id}>
-                {user.username}
-            </div>))}
         </div>
     );
 };
 
 export default UsersPage;
 
-// Incremental Static Regeneration (ISR)
