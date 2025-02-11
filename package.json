@@ -14,7 +14,8 @@
     "next": "15.1.6",
     "joi": "^17.13.3",
     "react-hook-form": "^7.54.2",
-    "@hookform/resolvers": "^3.10.0"
+    "@hookform/resolvers": "^3.10.0",
+    "axios": "^1.7.9"
   },
   "devDependencies": {
     "typescript": "^5",

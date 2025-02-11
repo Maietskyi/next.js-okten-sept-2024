@@ -2,7 +2,8 @@
 import CarComponent from "@/components/car/CarComponent";
 import React from "react";
 import {ICar} from "@/models/ICar";
-import {getAllCars} from "@/actions/actions";
+import {getAllCars} from "@/services/api.service";
+
 
 const CarsComponent = async () => {
     const cars = await getAllCars();

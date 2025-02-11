@@ -2,23 +2,26 @@
 
 import {carValidator} from "@/validator/CarValidator";
 import {ICar} from "@/models/ICar";
-import {useForm} from "react-hook-form";
+import {SubmitHandler, useForm} from "react-hook-form";
 import {joiResolver} from "@hookform/resolvers/joi";
-import {addCar} from "@/actions/actions";
+import {createCar} from "@/services/api.service";
 
 
 const CreateCarComponent = () => {
 
-    const {register, handleSubmit, reset, formState:{errors}} = useForm<ICar>({
-        resolver:joiResolver(carValidator)
+    const { handleSubmit, register, formState: { errors}, reset} = useForm<ICar>({
+        mode: "all",
+        resolver: joiResolver(carValidator)
     });
 
-    const onSubmit = async (car: ICar) => {
+    const onSubmit: SubmitHandler<ICar> = async (data) => {
         try {
-            await addCar(car);
+            await createCar(data);
             reset();
-        } catch (error) {
-            console.error("Failed to add car:", error);
+            alert("Car created successfully!");
+        } catch (err) {
+            console.error("Error creating car:", err);
+            alert("Error creating car!");
         }
     };
 
