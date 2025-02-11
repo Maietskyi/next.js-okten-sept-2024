@@ -8,6 +8,7 @@ const UsersPage = async () => {
     return (
         <div>
             Users Page
+            <h4>{Date.now()}</h4>
             {users.map((user: {id:number, username:string}) => (<div key={user.id}>
                 {user.username}
             </div>))}
