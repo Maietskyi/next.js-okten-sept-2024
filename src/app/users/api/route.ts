@@ -1,12 +1,37 @@
 // localhost:3000/hello/api [GET]
 
-export async function GET(){
+export const GET = async(request: Request, response: Response) => {
     console.log('GET request route handler');
-
     const users = await fetch('https://jsonplaceholder.typicode.com/users')
-    .then(value => value.json())
+        .then(value => value.json());
+
+    console.log(request);
+    console.log(response);
+
+    response.headers.set('Accept', 'application/json');
     return Response.json(users);
+    // return Response.json({message: request.url, status: 200});
+};
+
+// localhost:3000/hello/api [POST]
+export const POST = async() => {
+
+    console.log('POST request route handler');
+    return Response.json({message: 'Request route handler POST'});
 }
+
+
+
+// export async function GET(request: Request, response: Response){
+//     console.log('GET request route handler');
+//
+//     const users = await fetch('https://jsonplaceholder.typicode.com/users')
+//     .then(value => value.json());
+//     console.log(request);
+//     console.log(response);
+//     return Response.json(users);
+//     // return Response.json({message: request.url, status: 200});
+// }
 
 
 
